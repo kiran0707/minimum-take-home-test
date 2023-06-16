@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html> 
+<head> 
+    <title>Minimum</title> 
+</head> 
+<body> 
+    <h4>Upload  </h4> 
+    <form method = "POST" enctype="multipart/form-data" action = "/">   
+        <p>upload your emission factor file</p>
+        <input type="file" name="emission_file" accept=".csv"><br><br>
+        <p>upload your activity file</p>
+        <input type="file" name="activity_file" accept=".csv"><br><br>
+        <input type = "submit" value="Upload"> 
+    </form>
+    <br><br>
+    <br><br>
+    <p style="color:green;"> File uploaded successfully!! </p>
+    <form method = "POST" enctype="multipart/form-data" action="/show_merged" target="_blank">
+        <label for="lookup">Lookup field:</label>
+        <input type="text" id="lookup" name="lookup"><br><br>
+        <input type="submit" value="Show merged data"/>
+    </form>
+    <br><br>
+    <form  method = "POST" enctype="multipart/form-data" action="/show_group_by" target="_blank">
+        <label for="lookup">Lookup field:</label>
+        <input type="text" id="lookup" name="lookup"><br><br>
+        <label for="group">Group by field:</label>
+        <input type="text" id="group" name="group"><br><br>
+        <input type="submit" value="Show merged data with grouped by activity"/>
+    </form>
+    <br><br>
+    <form  method = "POST" enctype="multipart/form-data" action="/show_sorted_by" target="_blank">
+        <label for="lookup">Lookup field:</label>
+        <input type="text" id="lookup" name="lookup"><br><br>
+        <label for="sort">Sort by field:</label>
+        <input type="text" id="sort" name="sort"><br><br>
+        <input type="submit" value="Show merged data sorted by CO02"/>
+    </form>
+    <br><br>
+    <form  method = "POST" enctype="multipart/form-data" action="/show_filter_by" target="_blank">
+        <label for="lookup">Lookup field:</label>
+        <input type="text" id="lookup" name="lookup"><br><br>
+        <label for="filter">Filter by field:</label>
+        <input type="text" id="filter" name="filter"><br><br>
+        <label for="fvalue">Filter value:</label>
+        <input type="text" id="fvalue" name="fvalue"><br><br>
+        <input type="submit" value="Show merged data filtered by"/>
+    </form>
+</body> 
+</html>
